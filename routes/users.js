@@ -42,7 +42,6 @@ router.get("/getAllUsers", (req,res)=>{
 // })
 router.post('/getUser', (req,res)=>{
     const name = req.body.name;
-    // console.log(name)
     const users = Users.find({name: {$regex: req.body.name}});
 
     users.then((allU)=>{

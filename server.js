@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express();
 const db = require('./config/db');
+var cors = require('cors')
+app.use(cors)
 
 db.connection.once('open',()=>{
     console.log("Database Connected Successfully!")
